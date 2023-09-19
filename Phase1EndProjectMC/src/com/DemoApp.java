@@ -5,7 +5,7 @@ import java.io.File;
 public class DemoApp {
 
 	public static void main(String[] args) throws Exception{
-		File ff = new File("/home/migueljcaldeira/Desktop/MC_Phase1Project/Phase1EndProjectMC/Files/");
+		File ff = new File("/home/migueljcaldeira/Desktop/MC_Phase1Project/Files");
 //		System.out.println(ff.getPath());
 //		System.out.println(ff.isDirectory());
 //		String allFiles [] = ff.list();
