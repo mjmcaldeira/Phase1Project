@@ -8,7 +8,7 @@ public class AppLockers {
 		System.out.println("****************************************");
         System.out.println("*      Welcome to AppLockers.com       *");
         System.out.println("*      Developer: Miguel Caldeira      *");
-        System.out.println("*      Version 1.0                     *");
+        System.out.println("*      Version 1.0.1                   *");
         System.out.println("****************************************");
         
         

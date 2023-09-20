@@ -16,8 +16,7 @@ public class MainMenu {
         if (!rootPath.exists()) {
             boolean created = rootPath.mkdir();
             if (created) {
-//                System.out.println("Directory 'FileFolder' created successfully.");
-                return 0; // Directory created successfullyadding
+                return 0; // Directory created successfully
             } else {
                 System.err.println("Failed to create the 'FileFolder' directory.");
                 return 1; // Directory creation failed
