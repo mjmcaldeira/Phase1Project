@@ -5,21 +5,43 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import phase1.project.exception.ProperOptionValue;
 
 public class MainMenu {
 	
-	static File rootPath = new File("//home/migueljcaldeira/Desktop/MC_Phase1Project/FileFolder");
-	
-	public static void menuOptions() {
-		Scanner sc = new Scanner(System.in);
-		String con = null;
+	// Use a relative path to access the "FileFolder" directory
+    static File rootPath = new File("FileFolder");
+
+    public static int createDirectoryIfNotExists() {
+        // Check and create the directory if it doesn't exist
+        if (!rootPath.exists()) {
+            boolean created = rootPath.mkdir();
+            if (created) {
+//                System.out.println("Directory 'FileFolder' created successfully.");
+                return 0; // Directory created successfully
+            } else {
+                System.err.println("Failed to create the 'FileFolder' directory.");
+                return 1; // Directory creation failed
+            }
+        }
+        return 0; // Directory already exists
+    }
+
+    public static void menuOptions() {
+        Scanner sc = new Scanner(System.in);
+        String con = null;
+
+        int directoryStatus = createDirectoryIfNotExists();
+        if (directoryStatus == 1) {
+            System.exit(1); // Exit the program if directory creation fails
+        }
+		
 		
 		do {
+			System.out.println("\n Choose one option:");
 			System.out.println("\n1: Display all files in ascending order"+"\n");
 			System.out.println("2: Other options"+"\n");
 			System.out.println("3: Exit"+"\n");
-			System.out.println("Choose one option");
+			
 					
 
 			int choice;
@@ -66,7 +88,7 @@ public class MainMenu {
                 }
 
             } while (!con.equalsIgnoreCase("y") && !con.equalsIgnoreCase("n"));
-
+            System.out.println("Exiting.... Thank you!\n");
         } while (con.equalsIgnoreCase("y"));
     }
 }

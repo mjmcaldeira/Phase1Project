@@ -10,8 +10,15 @@ public class AppLockers {
         System.out.println("*      Developer: Miguel Caldeira      *");
         System.out.println("*      Version 1.0                     *");
         System.out.println("****************************************");
-        MainMenu.menuOptions();
+        
+        
+        int directoryStatus = MainMenu.createDirectoryIfNotExists();
 
-	}
-
+        if (directoryStatus == 0) {
+            MainMenu.menuOptions();
+        } else {
+            System.err.println("Application initialization failed. Exiting...");
+            System.exit(1);
+        }
+    }
 }
