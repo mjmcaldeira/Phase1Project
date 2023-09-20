@@ -16,6 +16,9 @@ public class AppLockers {
 
         if (directoryStatus == 0) {
             MainMenu.menuOptions();
+        	      	
+         
+             	
         } else {
             System.err.println("Application initialization failed. Exiting...");
             System.exit(1);

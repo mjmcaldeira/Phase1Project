@@ -17,7 +17,7 @@ public class MainMenu {
             boolean created = rootPath.mkdir();
             if (created) {
 //                System.out.println("Directory 'FileFolder' created successfully.");
-                return 0; // Directory created successfully
+                return 0; // Directory created successfullyadding
             } else {
                 System.err.println("Failed to create the 'FileFolder' directory.");
                 return 1; // Directory creation failed
@@ -58,8 +58,9 @@ public class MainMenu {
                     String[] listOfFiles = rootPath.list();
                     Arrays.sort(listOfFiles);
                     System.out.println("\nFiles in Ascending Order:");
+                    System.out.println("-------------------------\n");
                     for (String name : listOfFiles) {
-                        System.out.println(name);
+                        System.out.println(name+"\n");
                     }
 
                     break;
@@ -88,8 +89,9 @@ public class MainMenu {
                 }
 
             } while (!con.equalsIgnoreCase("y") && !con.equalsIgnoreCase("n"));
-            System.out.println("Exiting.... Thank you!\n");
+            
         } while (con.equalsIgnoreCase("y"));
+		System.out.println("Exiting.... Thank you!\n");
     }
 }
  
